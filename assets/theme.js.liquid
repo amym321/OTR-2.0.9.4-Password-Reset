@@ -1548,7 +1548,8 @@ timber.accessibleNav = function() {
     });
   }
 
-  timber.cache.$window.load(function() {
+  // changed .load() to .on() as .load() is deprecated - am
+  timber.cache.$window.on(function() {
     handleDropdownOffset($dropdowns);
   });
 
