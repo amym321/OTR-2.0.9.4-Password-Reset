@@ -202,9 +202,9 @@
 
       <div class="grid__item {{ footer_column_width }} {% if num_footer_columns == 1 %}text-center{% else %}{% endif %}">
 
+{% include 'footer-call' %}
+        
         <p style="font-size: 12px; font-weight: 700;">&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url }}<br>
-
-          {% include 'footer-call' %}
 
         {%- if section.settings.show_payment_icons -%}
             {%- unless shop.enabled_payment_types == empty -%}
