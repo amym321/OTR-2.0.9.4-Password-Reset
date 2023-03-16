@@ -204,8 +204,6 @@
 
 {% include 'footer-call' %}
         
-        <p style="font-size: 12px; font-weight: 700;">&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url }}<br>
-
         {%- if section.settings.show_payment_icons -%}
             {%- unless shop.enabled_payment_types == empty -%}
               <span class="visually-hidden">{{ 'general.payment.method' | t }}</span>
@@ -218,6 +216,8 @@
               </ul>
             {%- endunless -%}
           {%- endif -%}
+           <p style="font-size: 12px; font-weight: 700;">&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url }}<br>
+
       </div>
     </div>
 
